@@ -1,9 +1,9 @@
 # Rokoko Vision Automation
 
-Script tự động hóa quá trình upload video lên Rokoko Vision, download kết quả FBX, và convert sang CSV.
+Script tự động hóa quá trình upload 1 local video lên Rokoko Vision, download kết quả FBX, và convert sang CSV.
 
 ```
-Video (.mp4) → Rokoko Vision → FBX → Blender CLI → CSV
+Video → Rokoko Vision → FBX → Blender CLI → CSV
 ```
 
 1. Đăng nhập Rokoko Vision bằng email/password
@@ -11,7 +11,6 @@ Video (.mp4) → Rokoko Vision → FBX → Blender CLI → CSV
 3. Download file FBX kết quả
 4. Dùng Blender CLI convert FBX → CSV
 
----
 
 ## Yêu cầu
 
@@ -19,7 +18,6 @@ Video (.mp4) → Rokoko Vision → FBX → Blender CLI → CSV
 - [Blender](https://www.blender.org/download/) đã cài trên máy
 - Tài khoản Rokoko Vision
 
----
 
 ## Cài đặt
 
@@ -28,7 +26,6 @@ pip install playwright
 playwright install chromium
 ```
 
----
 
 ## Cấu hình
 
@@ -61,7 +58,6 @@ BLENDER_PATH = "/Applications/Blender.app/Contents/MacOS/Blender"
 BLENDER_PATH = "blender"
 ```
 
----
 
 ## Sử dụng
 
@@ -77,7 +73,6 @@ python rokoko_automation.py --video recordings/jump.mp4 --output results/jump.cs
 
 Khi chạy, script sẽ không mở trình duyệt Chrome (có giao diện) để thực hiện đăng nhập và upload. Sau khi Rokoko xử lý xong, file CSV sẽ được lưu tự động. Để xem quá trình thực hiện, hãy sửa `headless=True` thành `headless=False` trong file `rokoko_automation.py`.
 
----
 
 ## Định dạng CSV đầu ra
 
@@ -97,7 +92,6 @@ frame, Hips_loc_x, Hips_loc_y, Hips_loc_z, Hips_rot_x, ...
 2, 0.013, 0.980, -0.003, 0.001, ...
 ```
 
----
 
 ## Lưu ý
 
